@@ -15,7 +15,7 @@ class AboutConttroller extends Controller {
 	public function index()
 	{
             $heading = "Laravel 5! ";
-            $value = DB::table('dataform')->where('customer_id', '11')->first();
+            $value = DB::table('dataform')->where('customer_id', '13')->first();
             $sub = $value->customer_name;
             return view('about', ['head' => $heading, 'sub' => $sub]);
 	}
