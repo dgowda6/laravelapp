@@ -2,7 +2,7 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use DB;
+use App\People;
 use Illuminate\Http\Request;
 
 class AboutConttroller extends Controller {
@@ -15,10 +15,22 @@ class AboutConttroller extends Controller {
 	public function index()
 	{
             $heading = "Laravel 5! ";
-            $value = DB::table('dataform')->where('customer_id', '11')->first();
-            $sub = $value->customer_name;
+            $value = People::wherec_id('01')->first();
+            $sub = $value->name;
             return view('about', ['head' => $heading, 'sub' => $sub]);
 	}
+    
+    public function people(){
+        
+        $people = People::get();
+        return view('people', ['people' => $people]);
+    }
+    
+    public function personDetail($id){
+        
+        $person = People::wherec_id($id)->first();
+        return view('person', ['person' => $person]);
+    }
 
 	/**
 	 * Show the form for creating a new resource.
