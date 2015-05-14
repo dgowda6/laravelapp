@@ -4,7 +4,9 @@
     <div class="quote">
         <ul>
             @foreach($people as $person)
-                <li><a href="./person/{{$person->c_id}}">{{ $person->name }}</a></li>
+
+                <li><a href="people/person/{{$person->c_id}}">{{ $person->name }}</a></li>
+
             @endforeach
         </ul>
     </div>
