@@ -3,6 +3,7 @@
 		<title>People</title>
 		
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+		<link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
 
 		<style>
 			body {
@@ -17,12 +18,12 @@
 				font-family: 'Lato';
 			}
 			
-			li,h3 {
+			li,h3,a {
 				  text-align: left;
 			}
 			a {
 				color: #fff;
-				text-decoration: none;
+				text-decoration: none !important;
 			}
 			.container {
 				text-align: center;
@@ -41,6 +42,10 @@
 
 			.quote {
 				font-size: 24px;
+			}
+			input {
+				font-weight: bold !important;
+				font-size: 20px !important;
 			}
 		</style>
 	</head>

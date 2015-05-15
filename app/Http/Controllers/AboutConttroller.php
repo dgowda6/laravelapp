@@ -31,6 +31,19 @@ class AboutConttroller extends Controller {
         $person = People::wherec_id($id)->first();
         return view('person', ['person' => $person]);
     }
+    
+    public function personEdit($id){
+        
+        $person = People::wherec_id($id)->first();
+        return view('edit', ['person' => $person]);
+    }
+    
+    public function personUpdate($id, Request $req){
+        
+        $person = People::wherec_id($id)->first();
+        $person->fill($req->input())->save();
+        return redirect('people/person/'.$id);
+    }
 
 	/**
 	 * Show the form for creating a new resource.

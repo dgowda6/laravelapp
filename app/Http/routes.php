@@ -17,9 +17,9 @@ Route::get('home', 'HomeController@index');
 
 
 Route::get('people', 'AboutConttroller@people');
-
 Route::get('people/person/{id}', 'AboutConttroller@personDetail');
-
+Route::get('people/person/edit/{id}', 'AboutConttroller@personEdit');
+Route::patch('people/{id}', 'AboutConttroller@personUpdate');
 
 Route::get('about', 'AboutConttroller@index');
 
