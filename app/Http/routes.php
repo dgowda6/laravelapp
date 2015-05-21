@@ -11,19 +11,31 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+//Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+//Route::get('home', 'HomeController@index');
 
 
-Route::get('people', 'AboutConttroller@people');
+/*Route::get('people', 'AboutConttroller@people');
 Route::get('people/person/{id}', 'AboutConttroller@personDetail');
 Route::get('people/person/edit/{id}', 'AboutConttroller@personEdit');
-Route::patch('people/{id}', 'AboutConttroller@personUpdate');
+Route::patch('people/{id}', 'AboutConttroller@personUpdate');*/
 
-Route::get('about', 'AboutConttroller@index');
+Route::resource('people', 'PeopleController',
+    ['names' => [
+        'index' => 'people',
+        'create' => 'people_create',
+        'show' => 'people_show',
+        'edit' => 'people_edit',
+        'update' => 'people_update',
+        'delete' => 'people_delete',
+        ]
+    ]
+);
+
+/*Route::get('about', 'AboutConttroller@index');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
-]);
+]);*/

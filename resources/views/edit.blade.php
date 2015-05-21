@@ -6,7 +6,7 @@
         <h3>Person Name : {{$person->name}}</h3>
     </div>-->
     <div class="quote row">
-    {!! Form::model($person, ['url' => 'people/'.$person->c_id, 'method' => 'PATCH', 'class' => 'form-horizontal' ]) !!}
+    {!! Form::model($person, ['route' => ['people_update', $person->c_id], 'method' => 'PATCH', 'class' => 'form-horizontal' ]) !!}
         
             <div class="form-group">
                 {!! Form::label('labelID', 'ID :', ['class' => 'control-label col-md-5']) !!}

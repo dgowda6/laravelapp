@@ -53,6 +53,9 @@
 		<div class="container">
 			<div class="content">
 				<div class="title">Peoples</div>
+				<div>
+					<a href="{{ route('people') }}">Home</a>
+				</div>
 				@yield('contents')
 			</div>
 		</div>
