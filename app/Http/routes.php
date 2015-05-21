@@ -25,6 +25,7 @@ Route::resource('people', 'PeopleController',
     ['names' => [
         'index' => 'people',
         'create' => 'people_create',
+        'store' => 'people_store',
         'show' => 'people_show',
         'edit' => 'people_edit',
         'update' => 'people_update',

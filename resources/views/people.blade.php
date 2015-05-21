@@ -14,5 +14,11 @@
 
             @endforeach
         </ul>
+        <div class="quote">
+        <!--<a href="edit/{{$person->c_id}}">Edit</a>-->
+        <a href="{{ route('people_create') }}">
+            Add
+        </a>
+    </div>
     </div>
 @stop

@@ -26,7 +26,7 @@ class PeopleController extends Controller {
 	 */
 	public function create()
 	{
-		//
+		return view('add');
 	}
 
 	/**
@@ -34,9 +34,10 @@ class PeopleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $req)
 	{
-		//
+		People::create($req->all());
+        return redirect()->route('people');
 	}
 
 	/**
