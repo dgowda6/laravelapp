@@ -29,7 +29,7 @@ Route::resource('people', 'PeopleController',
         'show' => 'people_show',
         'edit' => 'people_edit',
         'update' => 'people_update',
-        'delete' => 'people_delete',
+        'destroy' => 'people_destroy',
         ]
     ]
 );

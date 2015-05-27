@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
+use App\Http\Requests\CreatePersonRequest;
 use App\Http\Controllers\Controller;
 use App\People;
 
@@ -34,7 +34,7 @@ class PeopleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $req)
+	public function store(CreatePersonRequest $req)
 	{
 		People::create($req->all());
         return redirect()->route('people');
@@ -85,7 +85,9 @@ class PeopleController extends Controller {
 	 */
 	public function destroy($id)
 	{
-		//
+		$person = People::wherec_id($id)->first();
+		$person->delete();
+		return redirect()->route('people');
 	}
 
 }

@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color : #16a765;
+    display: table;
+    font-weight: 100;
+    font-family: 'Lato';
+}
+
+li,h3,a {
+      text-align: left;
+}
+a {
+    color: #fff;
+    text-decoration: none !important;
+}
+.container {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content {
+    text-align: center;
+    display: inline-block;
+}
+
+.title {
+    font-size: 96px;
+    margin-bottom: 40px;
+}
+
+.quote {
+    font-size: 24px;
+}
+input {
+    font-weight: bold !important;
+    font-size: 20px !important;
+}
+
+input.span-delete{
+    display: inline-block;
+    font-weight: none !important;
+    font-size: 24px !important;
+    background: none !important;
+    border: none !important;
+    text-decoration: none !important;
+}
+input.span-delete:active,
+input.span-delete:hover {
+  outline: none !important;
+  border: none !important;
+}
+input.span-delete:active,
+input.span-delete:hover,
+input.span-delete:focus {
+  color: #23527c !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+input.span-delete:active,
+input.span-delete:focus {
+  outline: none !important;
+  outline: none !important;
+  outline-offset: -2px !important;
+  border: none !important;
+}
+
+.error-help{
+    font-size: 12px !important;
+    text-align: left !important;
+    font-family: monospace !important;
+    font-weight: bold !important;
+}

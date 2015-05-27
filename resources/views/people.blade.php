@@ -16,7 +16,7 @@
         </ul>
         <div class="quote">
         <!--<a href="edit/{{$person->c_id}}">Edit</a>-->
-        <a href="{{ route('people_create') }}">
+        <a href="{{ route('people_create') }}" style="font-weight: bold; font-size:24px;">
             Add
         </a>
     </div>

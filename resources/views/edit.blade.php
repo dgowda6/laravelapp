@@ -1,6 +1,9 @@
 @extends('temp')
 
 @section('contents')
+    <div>
+        <a href="{{ route('people') }}" style="font-weight: bold; font-size:24px;">Home</a>
+    </div>
     <div class="quote row">
     {!! Form::model($person, ['route' => ['people_update', $person->c_id], 'method' => 'PATCH', 'class' => 'form-horizontal' ]) !!}
         
